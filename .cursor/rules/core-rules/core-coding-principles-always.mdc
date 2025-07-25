@@ -1,0 +1,22 @@
+---
+description: Core coding principles for data-focused design
+globs:
+alwaysApply: true
+---
+
+# Core Coding Principles
+
+## Data-First Design
+- Prefer data to calculations or actions
+- Pass data to functions rather than defining it in function bodies
+- Functions should be passed data rather than accessing global/external state
+
+## Pure Functions Priority
+- Prefer calculations (pure functions) to actions (impure functions)
+- Pure functions always produce the same output for the same input
+- Avoid side effects like disk IO, network IO, or logging in calculations
+
+## Action Placement
+- Place actions at the edge of the application (bottom of call stack)
+- Separate program description from program execution
+- Determine what the program should do before executing

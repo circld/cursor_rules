@@ -1,0 +1,30 @@
+---
+description: Tasks involving refactoring existing code
+alwaysApply: false
+---
+
+# Code Refactoring Guidelines
+
+## Separation of Concerns
+When refactoring, organize code into three categories:
+
+### Data Layer
+- Plain objects, arrays, primitives
+- No behavior, only structure
+- Immutable when possible
+
+### Calculation Layer  
+- Pure functions that transform data
+- No side effects or external dependencies
+- Predictable and testable
+
+### Action Layer
+- Functions that perform effects (IO, logging, etc.)
+- Should be pushed to application edges
+- Call calculations but don't contain business logic
+
+## Refactoring Process
+1. Identify mixed concerns in existing code
+2. Extract pure calculations first
+3. Isolate data structures
+4. Push actions to boundaries

@@ -1,0 +1,27 @@
+---
+description: Python coding standards and best practices
+globs: *.py
+alwaysApply: false
+---
+# Python Standards
+
+## Type Hints
+- Always define explicit return types for functions
+
+## Function Design
+- Create pure functions that take data as parameters
+- Avoid functions that access external state
+- Return data rather than performing side effects
+
+<example>
+// Good: Pure function with explicit types
+def calculate_total(items: List[CartItem]) -> int:
+    return sum(map(getattr("price"), items))
+</example>
+
+<example type="invalid">
+// Bad: Impure function accessing external state
+def calculate_total() -> int:
+    global globalItems
+    return sum(map(gettattr("price"), globalItems))
+</example>

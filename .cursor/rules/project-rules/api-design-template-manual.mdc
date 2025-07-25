@@ -1,0 +1,16 @@
+# API Design Template
+
+## RESTful Endpoints
+- Use appropriate HTTP methods (GET, POST, PUT, DELETE)
+- Follow consistent URL patterns: `/api/v1/resources`
+- Return appropriate status codes
+
+## Data Flow
+- Controllers receive data, don't create it
+- Business logic in pure functions
+- Database actions at service layer edges
+
+## Error Handling
+- Return structured error responses
+- Log errors but don't mix logging with business logic
+- Validate input data before processing
