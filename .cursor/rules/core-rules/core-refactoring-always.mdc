@@ -1,0 +1,10 @@
+---
+description: Core refactoring principles
+globs:
+alwaysApply: true
+---
+
+# Core Refactoring Principles
+
+## Intent preservation
+- If the intent is likely to be changed by the deletion of code or files, propose an alternate solution that preserves intent
